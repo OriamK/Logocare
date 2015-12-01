@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 5/11/2015 05:15:37 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="logocare" name="com.model.pojo.Listadeseo" optimistic-lock="version" table="listadeseo">
+    <id name="idListaDeseo" type="int">
+      <column name="idListaDeseo"/>
+      <generator class="assigned"/>
+    </id>
+    <many-to-one class="com.model.pojo.Cliente" fetch="select" name="cliente" lazy="false">
+      <column name="idCliente" not-null="true"/>
+    </many-to-one>
+    <many-to-one class="com.model.pojo.Producto" fetch="select" name="producto" lazy="false">
+      <column name="idProducto" not-null="true"/>
+    </many-to-one>
+    <property name="fecha" type="date">
+      <column length="10" name="Fecha"/>
+    </property>
+  </class>
+</hibernate-mapping>
