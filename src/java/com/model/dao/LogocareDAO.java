@@ -218,15 +218,5 @@ public class LogocareDAO {
 
     }
     
-    public static void main(String[] args) {
-        
-        List<Categoria> cs = getCategorias();
-        
-        
-        for (Categoria c : cs) {
-            
-            System.out.println(c.getFoto());
-        }
-    }
 
 }
